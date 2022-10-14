@@ -2,11 +2,16 @@
     <header
         class="relative flex top-0 z-50 py-7 items-center justify-between text-slate-700   leading-6 dark:text-slate-200 bg-bodyColor mx-5 xs:mx-14 lg:!mx-auto lg:max-w-5xl">
 
-        <DarkModeToggle />
+        <svg aria-hidden="true" role="img" class="iconify iconify--logos" width="37.07" height="36"
+            preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 198">
+            <path fill="#41B883" d="M204.8 0H256L128 220.8L0 0h97.92L128 51.2L157.44 0h47.36Z"></path>
+            <path fill="#41B883" d="m0 0l128 220.8L256 0h-51.2L128 132.48L50.56 0H0Z"></path>
+            <path fill="#35495E" d="M50.56 0L128 133.12L204.8 0h-47.36L128 51.2L97.92 0H50.56Z"></path>
+        </svg>
 
         <div class="flex items-center">
             <nav class="justify-between self-center">
-              
+
 
                 <div :class="menuOpen ? 'flex' : 'hidden'" class="md:flex">
                     <ul
@@ -20,10 +25,11 @@
                 </div>
             </nav>
 
-            
+
             <div class="flex items-center md:border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
                 <DarkModeToggle />
-                <button @click="menuOpen = !menuOpen" class="md:hidden ml-6 float-right cursor-pointer hover:opacity-60">
+                <button @click="menuOpen = !menuOpen"
+                    class="md:hidden ml-6 float-right cursor-pointer hover:opacity-60">
                     <Icon :icon="menuOpen ? 'ep:close-bold' : 'ep:menu'" class="text-2xl text-titleColor"
                         aria-label="menu mobile" />
                 </button>
